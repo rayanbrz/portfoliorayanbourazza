@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets BTS SIO - Bourazza Rayan</title>
+    <link rel="stylesheet" href="bourazza.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bourazza Rayan</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#presentation-bts">BTS SIO</a></li>
+                <li><a href="index.html#competences">Compétences</a></li>
+                <li><a href="projets-bts.html">Projets BTS SIO</a></li>
+                <li><a href="index.html#veille">Veille technologique</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="bts-projets-section">
+        <h2>Mes Projets Scolaires BTS SIO</h2>
+        <div class="bts-projets-grid">
+            <div class="bts-projet-card">
+                <img src="images/PPE auto-ecole.png" alt="PPE Auto-école" style="width:100%;border-radius:10px 10px 0 0;max-height:120px;object-fit:cover;">
+                <h3>PPE Auto-école</h3>
+                <p>Projet de gestion d'une auto-école (PPE).</p>
+                <a href="document/auto-ecole.pdf" target="_blank">Voir la présentation PDF</a>
+            </div>
+            <div class="bts-projet-card">
+                <img src="images/shopify.png" alt="Boutique Shopify" style="width:100%;border-radius:10px 10px 0 0;max-height:120px;object-fit:cover;">
+                <h3>Boutique Shopify</h3>
+                <p>Création d'une boutique en ligne avec Shopify.</p>
+                <a href="document/A-propos-de-Trouve-Plante-1-3.pdf" target="_blank">Voir la présentation PDF</a>
+            </div>
+            <div class="bts-projet-card">
+                <img src="images/snake.png" alt="Snake" style="width:100%;border-radius:10px 10px 0 0;max-height:120px;object-fit:cover;">
+                <h3>Snake</h3>
+                <p>Développement du jeu Snake en Python.</p>
+                <a href="document/Présentation%20%20Projet%20Snake%20.pptx_20241011_142217_0000.pdf" target="_blank">Voir la présentation PDF</a>
+            </div>
+            <div class="bts-projet-card">
+                <img src="images/E-enseignement.png" alt="E-Enseignement" style="width:100%;border-radius:10px 10px 0 0;max-height:120px;object-fit:cover;">
+                <h3>E-Enseignement</h3>
+                <p>Site web de gestion d'enseignement.</p>
+                <a href="document/Site%20web%20E-enseignement.pdf" target="_blank">Voir la présentation PDF</a>
+            </div>
+            <div class="bts-projet-card">
+                <img src="images/glip.png" alt="TP GLIP" style="width:100%;border-radius:10px 10px 0 0;max-height:120px;object-fit:cover;">
+                <h3>TP GLIP</h3>
+                <p>Travaux pratiques sur la gestion de projet.</p>
+                <a href="document/tp GLPI (1).pdf" target="_blank">Voir la présentation PDF</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Bourazza Rayan. Tous droits réservés.</p>
+    </footer>
+    <script>
+        // Animation ou alerte pour les projets sans document
+        document.querySelectorAll('.no-doc').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const projet = this.getAttribute('data-projet');
+                this.textContent = 'Document indisponible';
+                this.style.background = '#e74c3c';
+                setTimeout(() => {
+                    this.textContent = 'Document à venir';
+                    this.style.background = '';
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html> 
